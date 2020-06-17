@@ -1,0 +1,48 @@
+﻿@model prjProyectoRestaurante.Models.Factura
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Factura</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaFactura)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FechaFactura)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EstadoDeFactura)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EstadoDeFactura)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Observacion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Observacion)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Persona)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Persona.IDPersona)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Orden)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Orden.IDOrden)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IDFactura">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

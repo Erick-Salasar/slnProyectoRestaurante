@@ -1,0 +1,39 @@
+﻿@model prjProyectoRestaurante.Models.Mesa
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Mesa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroMesa)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumeroMesa)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EstadoMesa)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EstadoMesa.IDEstado)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ReservaMesa)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ReservaMesa.IDReservaMesa)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IDMesa" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
